@@ -15,7 +15,6 @@ public class Main {
         id = 2; //เปลี่ยนค่าเป็น 2
 
         System.out.println(id);
-        s1.setStudentID(id);
 
         System.out.println("Student ID : " + s1.getStudentID()); // ผลลัพธ์ออกมาเป็น 1 เพราะเราได้ set ค่าใส่ใน method แล้ว
         System.out.println("Student Name : " + s1.getStudentName());
