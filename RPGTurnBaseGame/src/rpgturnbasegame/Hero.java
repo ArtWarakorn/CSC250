@@ -8,6 +8,15 @@ package rpgturnbasegame;
  *
  * @author art
  */
-public class Hero {
-    
+public abstract class Hero extends Character {
+    protected double critChance; // 0.0 - 1.0
+
+    public Hero(String name, int maxHp, int atk, int def, double critChance) {
+        super(name, maxHp, atk, def);
+        this.critChance = critChance;
+    }
+
+    public double getCritChance() {
+        return critChance;
+    }
 }

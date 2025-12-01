@@ -8,6 +8,16 @@ package rpgturnbasegame;
  *
  * @author art
  */
-public class Monster {
-    
+public abstract class Monster extends Character {
+    protected double critChance;
+
+    public Monster(String name, int maxHp, int atk, int def, double critChance) {
+        super(name, maxHp, atk, def);
+        this.critChance = critChance;
+    }
+
+    public double getCritChance() {
+        return critChance;
+    }
 }
+
