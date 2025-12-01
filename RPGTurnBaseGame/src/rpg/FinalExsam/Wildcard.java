@@ -21,7 +21,16 @@ public class Wildcard {
 
     public static void printNumbers(List<? extends Number> list) {
         // <? extends Number> wild card รับเป็น type Number (Ex. int, Double, Number)
+        //Upper Bound
         for (Number n : list) {
+            System.out.println(n);
+        }
+    }
+
+    public static void printNumber(List<? super Integer> list) {
+        // <? super Integer> wild card รับเป็น type Number (Ex. Object, int, Number)
+        //Lowwer Bound
+        for (Object n : list) {
             System.out.println(n);
         }
     }
@@ -47,5 +56,30 @@ public class Wildcard {
         printNumbers(doubleList);
         printNumbers(numberList);
         //-----------------------------------------//
+
+        /*
+            run:                                                        UML Class
+            1                                                           
+            2                                                           Object----String
+            3                                                              |
+            I                                                              | 
+            Say                                                         Number----Double  
+            Good                                                           |  
+            Bye                                                            |   
+            2.25                                                        Integer 
+            3.33
+            4.12
+            32
+            33
+            34
+            2.3
+            3.3
+            4.3
+            2.3
+            34
+            4.3
+            BUILD SUCCESSFUL (total time: 0 seconds)
+        
+         */
     }
 }
