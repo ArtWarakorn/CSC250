@@ -9,7 +9,7 @@ package rpg.FinalExsam;
  * @author art
  */
 
-class List  {
+class ListData  {
     
     //generics method
     public <T> void add(T item) {
@@ -28,15 +28,15 @@ public class Generics {
     public static void main(String[] args){
         
         //generics method test
-        List l = new List();
+        ListData l = new ListData();
         l.add("Test");
         l.add(2+3);
         
         //generics class test
-        PrintItem<String> print = new PrintItem<>();
+        PrintItem<String> print = new PrintItem<>();        //  (String)
         print.add("Hello String");
         
-        PrintItem<Integer> intPrint = new PrintItem<>();
+        PrintItem<Integer> intPrint = new PrintItem<>();    //  (Integer)
         intPrint.add(2*3);
     }
     
@@ -45,6 +45,8 @@ public class Generics {
     
         Test
         5
+        Hello String
+        6
     
     */
 }
